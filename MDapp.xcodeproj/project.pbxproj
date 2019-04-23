@@ -13,6 +13,8 @@
 		817FC4A82263DD7300BB115C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817FC4A62263DD7300BB115C /* Main.storyboard */; };
 		818135D6226B5D62008D28F8 /* MDthreeAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818135D5226B5D62008D28F8 /* MDthreeAdd.swift */; };
 		818135D8226B609C008D28F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 818135D7226B609C008D28F8 /* GoogleService-Info.plist */; };
+		818135DA226BA3D2008D28F8 /* MDfour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818135D9226BA3D2008D28F8 /* MDfour.swift */; };
+		818135DE226CB1D6008D28F8 /* MDfourDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818135DD226CB1D6008D28F8 /* MDfourDoc.swift */; };
 		81CB19C122625E03008FE763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB19C022625E03008FE763 /* AppDelegate.swift */; };
 		81CB19C322625E03008FE763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB19C222625E03008FE763 /* ViewController.swift */; };
 		81CB19C822625E05008FE763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CB19C722625E05008FE763 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		817FC4A72263DD7300BB115C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		818135D5226B5D62008D28F8 /* MDthreeAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDthreeAdd.swift; sourceTree = "<group>"; };
 		818135D7226B609C008D28F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		818135D9226BA3D2008D28F8 /* MDfour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDfour.swift; sourceTree = "<group>"; };
+		818135DD226CB1D6008D28F8 /* MDfourDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDfourDoc.swift; sourceTree = "<group>"; };
 		81CB19BD22625E03008FE763 /* MDapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CB19C022625E03008FE763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CB19C222625E03008FE763 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				817FC4A02263654A00BB115C /* MDthree.swift */,
 				817FC4A22263B8F000BB115C /* MDthreeFilter.swift */,
 				818135D5226B5D62008D28F8 /* MDthreeAdd.swift */,
+				818135D9226BA3D2008D28F8 /* MDfour.swift */,
+				818135DD226CB1D6008D28F8 /* MDfourDoc.swift */,
 				817FC4A62263DD7300BB115C /* Main.storyboard */,
 				81CB19C722625E05008FE763 /* Assets.xcassets */,
 				81CB19CC22625E05008FE763 /* Info.plist */,
@@ -409,10 +415,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818135DA226BA3D2008D28F8 /* MDfour.swift in Sources */,
 				81CB19EF22627235008FE763 /* MDtwo.swift in Sources */,
 				818135D6226B5D62008D28F8 /* MDthreeAdd.swift in Sources */,
 				817FC4A12263654A00BB115C /* MDthree.swift in Sources */,
 				81CB19C322625E03008FE763 /* ViewController.swift in Sources */,
+				818135DE226CB1D6008D28F8 /* MDfourDoc.swift in Sources */,
 				81CB19C122625E03008FE763 /* AppDelegate.swift in Sources */,
 				817FC4A32263B8F000BB115C /* MDthreeFilter.swift in Sources */,
 			);

@@ -11,11 +11,13 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var btnGoToMD2: UIButton!
     @IBOutlet weak var btnGoToMD3: UIButton!
+    @IBOutlet weak var btnGoToMD4: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnGoToMD2.setTitle("Mājasdarbs 2", for: .normal)
         btnGoToMD3.setTitle("Mājasdarbs 3", for: .normal)
+        btnGoToMD4.setTitle("Mājasdarbs 4", for: .normal)
     }
 
 
