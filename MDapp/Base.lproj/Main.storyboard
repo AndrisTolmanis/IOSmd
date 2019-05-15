@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="77C-Li-JiB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="77C-Li-JiB">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -303,10 +303,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wz3-hg-RKq" userLabel="yellowView">
-                                <rect key="frame" x="137" y="427" width="100" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YzT-eC-irc" userLabel="greenView">
                                 <rect key="frame" x="16" y="427" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -329,6 +325,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50V-SJ-rm6" userLabel="yellowView">
+                                <rect key="frame" x="137" y="427" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -336,7 +337,6 @@
                             <constraint firstItem="TGe-Oe-hg0" firstAttribute="leading" secondItem="kMq-BD-FYm" secondAttribute="leading" id="7Po-Dg-lWY"/>
                             <constraint firstItem="TGe-Oe-hg0" firstAttribute="top" secondItem="GMv-7f-hgC" secondAttribute="bottom" constant="44" id="Cp9-xV-jfH"/>
                             <constraint firstItem="TGe-Oe-hg0" firstAttribute="top" secondItem="kMq-BD-FYm" secondAttribute="top" constant="212" id="GIe-Kr-aud"/>
-                            <constraint firstItem="TGe-Oe-hg0" firstAttribute="centerX" secondItem="Wz3-hg-RKq" secondAttribute="centerX" id="gh6-mW-oaO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qqz-Zi-g4z"/>
                     </view>
@@ -346,7 +346,7 @@
                         <outlet property="lblTi" destination="GMv-7f-hgC" id="Nrc-fB-aiI"/>
                         <outlet property="pickerTime" destination="TGe-Oe-hg0" id="7Gz-hF-GBw"/>
                         <outlet property="redView" destination="0hp-lf-c1n" id="HFS-Lc-amB"/>
-                        <outlet property="yellowView" destination="Wz3-hg-RKq" id="hw9-TT-nQL"/>
+                        <outlet property="yellowView" destination="50V-SJ-rm6" id="sli-w8-nos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ytu-Zh-oO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
