@@ -18,9 +18,6 @@ class MDthreeFilter:UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnHide.setTitle("Hide locations without a description", for: .normal)
-        btnRange.setTitle("Disable points in 10km range", for: .normal)
-        btnSave.setTitle("Save filters", for: .normal)
     }
     @IBAction func btnHidePressed(_ sender: Any) {
         for location in locations{
@@ -31,11 +28,6 @@ class MDthreeFilter:UIViewController, UINavigationControllerDelegate {
                 }
             }
         }
-    }
-    @IBAction func btnRangePressed(_ sender: Any) {
-    }
-    @IBAction func btnBackPressed(_ sender: UIButton) {
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

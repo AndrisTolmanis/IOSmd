@@ -26,7 +26,8 @@ class MDfour: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func btnConfirmPressed(_ sender: UIButton) {
-        if let usr = txtUsername.text{
+        if var usr = txtUsername.text{
+            usr = usr.replacingOccurrences(of: " ", with: "", options: .regularExpression, range: nil)
             fetchUserData(username: usr)
         }
     }
@@ -41,8 +42,6 @@ class MDfour: UIViewController {
                 do {
                     let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
                     if let validDictionary = jsonSerialized {
-                        
-                        
                         let validName = validDictionary["name"] as? String
                         let validCompnay = validDictionary["company"] as? String
                         let validBio = validDictionary["bio"] as? String
@@ -67,8 +66,6 @@ class MDfour: UIViewController {
         }
         task.resume()
     }
-    
-    
 }
 
 extension UIImageView {
@@ -89,5 +86,94 @@ extension UIImageView {
     func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
+    }
+}
+
+extension UIViewController {
+    func showToast(message : String) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 150, y: self.view.frame.size.height-100, width: 300, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    } }
+
+extension UIViewController{
+    func downloadSomething(url: String, name: String){
+        // Create destination URL
+        let documentsUrl:URL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
+        let destinationFileUrl = documentsUrl.appendingPathComponent(name)
+        
+        //Create URL to the source file you want to download
+        let fileURL = URL(string: url)
+        
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+        
+        let request = URLRequest(url:fileURL!)
+        
+        let task = session.downloadTask(with: request) { (tempLocalUrl, response, error) in
+            if let tempLocalUrl = tempLocalUrl, error == nil {
+                // Success
+                if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                    print("Successfully downloaded. Status code: \(statusCode)")
+                }
+                
+                do {
+                    try FileManager.default.copyItem(at: tempLocalUrl, to: destinationFileUrl)
+                } catch (let writeError) {
+                    print("Error creating a file \(destinationFileUrl) : \(writeError)")
+                }
+                
+            } else {
+                print("Error took place while downloading a file. Error description: %@", error?.localizedDescription ?? "no");
+            }
+        }
+        task.resume()
+    }
+}
+
+extension UITableViewCell{
+    func downloadSomething(url: String, name: String){
+        // Create destination URL
+        let documentsUrl:URL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
+        let destinationFileUrl = documentsUrl.appendingPathComponent(name)
+        
+        //Create URL to the source file you want to download
+        let fileURL = URL(string: url)
+        
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+        
+        let request = URLRequest(url:fileURL!)
+        
+        let task = session.downloadTask(with: request) { (tempLocalUrl, response, error) in
+            if let tempLocalUrl = tempLocalUrl, error == nil {
+                // Success
+                if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                    print("Successfully downloaded. Status code: \(statusCode)")
+                }
+                
+                do {
+                    try FileManager.default.copyItem(at: tempLocalUrl, to: destinationFileUrl)
+                } catch (let writeError) {
+                    print("Error creating a file \(destinationFileUrl) : \(writeError)")
+                }
+                
+            } else {
+                print("Error took place while downloading a file. Error description: %@", error?.localizedDescription);
+            }
+        }
+        task.resume()
     }
 }

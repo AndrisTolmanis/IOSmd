@@ -9,6 +9,7 @@ target 'MDapp' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
+	pod 'SwiftyJSON', '~> 4.0'
 
   target 'MDappTests' do
     inherit! :search_paths

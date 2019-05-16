@@ -1,7 +1,7 @@
 import UIKit
 import SwiftyJSON
 
-class MDfourDoc: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MDfourMedia: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var table: UITableView!
     var jsonData = [[String:String]]()
     override func viewDidLoad() {
@@ -11,7 +11,7 @@ class MDfourDoc: UIViewController, UITableViewDataSource, UITableViewDelegate {
         table.dataSource = self
         searchRepo()
         sleep(1)
-//        table.reloadData()
+        //        table.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,7 +21,7 @@ class MDfourDoc: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // Populate the table view
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("Filling the table")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! ListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! ListCellMedia
         let row = indexPath.row
         let url = jsonData[row]["download_url"] ?? "That file"
         let name = jsonData[row]["name"] ?? "This link"
@@ -40,25 +40,20 @@ class MDfourDoc: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }else{
                 if let json = try? JSON(data: data!){
                     for (_,subJson):(String, JSON) in json {
-                        if subJson["name"].string!.hasSuffix(".pdf") ||
-                            subJson["name"].string!.hasSuffix(".doc") ||
-                            subJson["name"].string!.hasSuffix(".docx") ||
-                            subJson["name"].string!.hasSuffix(".ppt") ||
-                            subJson["name"].string!.hasSuffix(".pptx") ||
-                            subJson["name"].string!.hasSuffix(".xls") ||
-                            subJson["name"].string!.hasSuffix(".xlsx") {
+                        if subJson["name"].string!.hasSuffix(".mp3") ||
+                            subJson["name"].string!.hasSuffix(".mp4") {
                             self.jsonData.append(["name": subJson["name"].string!, "download_url": subJson["download_url"].string!])
                         }
                     }
                 }
-//                print(self.jsonData)
+                //                print(self.jsonData)
             }
         })
         task.resume()
     }
 }
 
-class ListCell: UITableViewCell{
+class ListCellMedia: UITableViewCell{
     @IBOutlet var lblName: UILabel!
     var name:String = "Cool file"
     var link:String = "lets go"

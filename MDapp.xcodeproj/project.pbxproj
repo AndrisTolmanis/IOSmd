@@ -21,6 +21,9 @@
 		81CB19D622625E05008FE763 /* MDappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB19D522625E05008FE763 /* MDappTests.swift */; };
 		81CB19E122625E05008FE763 /* MDappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB19E022625E05008FE763 /* MDappUITests.swift */; };
 		81CB19EF22627235008FE763 /* MDtwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB19EE22627235008FE763 /* MDtwo.swift */; };
+		81D4F4E3228DF2B3006AB5A5 /* MDfourMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D4F4E2228DF2B3006AB5A5 /* MDfourMedia.swift */; };
+		81D4F4E5228DF539006AB5A5 /* MDfourWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D4F4E4228DF539006AB5A5 /* MDfourWeb.swift */; };
+		81D4F4E7228DF651006AB5A5 /* MDfourPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D4F4E6228DF651006AB5A5 /* MDfourPhotos.swift */; };
 		B36F1EF0917E50AB2375727E /* Pods_MDappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585AA46C56EEA8A4432639BC /* Pods_MDappTests.framework */; };
 		E2B6E104F64FCE40209F4F18 /* Pods_MDapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D055A6D253BD3EFB1723547 /* Pods_MDapp.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,9 @@
 		81CB19E022625E05008FE763 /* MDappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDappUITests.swift; sourceTree = "<group>"; };
 		81CB19E222625E05008FE763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81CB19EE22627235008FE763 /* MDtwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDtwo.swift; sourceTree = "<group>"; };
+		81D4F4E2228DF2B3006AB5A5 /* MDfourMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDfourMedia.swift; sourceTree = "<group>"; };
+		81D4F4E4228DF539006AB5A5 /* MDfourWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDfourWeb.swift; sourceTree = "<group>"; };
+		81D4F4E6228DF651006AB5A5 /* MDfourPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDfourPhotos.swift; sourceTree = "<group>"; };
 		840B6362B3558D6A4C3E775A /* Pods-MDappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDappTests.debug.xcconfig"; path = "Target Support Files/Pods-MDappTests/Pods-MDappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		91A452E3A89D719632A50594 /* Pods_MDappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,6 +163,9 @@
 				818135D5226B5D62008D28F8 /* MDthreeAdd.swift */,
 				818135D9226BA3D2008D28F8 /* MDfour.swift */,
 				818135DD226CB1D6008D28F8 /* MDfourDoc.swift */,
+				81D4F4E2228DF2B3006AB5A5 /* MDfourMedia.swift */,
+				81D4F4E4228DF539006AB5A5 /* MDfourWeb.swift */,
+				81D4F4E6228DF651006AB5A5 /* MDfourPhotos.swift */,
 				817FC4A62263DD7300BB115C /* Main.storyboard */,
 				81CB19C722625E05008FE763 /* Assets.xcassets */,
 				81CB19CC22625E05008FE763 /* Info.plist */,
@@ -391,6 +400,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-MDapp/Pods-MDapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -400,6 +410,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -418,11 +429,14 @@
 				818135DA226BA3D2008D28F8 /* MDfour.swift in Sources */,
 				81CB19EF22627235008FE763 /* MDtwo.swift in Sources */,
 				818135D6226B5D62008D28F8 /* MDthreeAdd.swift in Sources */,
+				81D4F4E5228DF539006AB5A5 /* MDfourWeb.swift in Sources */,
 				817FC4A12263654A00BB115C /* MDthree.swift in Sources */,
 				81CB19C322625E03008FE763 /* ViewController.swift in Sources */,
+				81D4F4E7228DF651006AB5A5 /* MDfourPhotos.swift in Sources */,
 				818135DE226CB1D6008D28F8 /* MDfourDoc.swift in Sources */,
 				81CB19C122625E03008FE763 /* AppDelegate.swift in Sources */,
 				817FC4A32263B8F000BB115C /* MDthreeFilter.swift in Sources */,
+				81D4F4E3228DF2B3006AB5A5 /* MDfourMedia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
